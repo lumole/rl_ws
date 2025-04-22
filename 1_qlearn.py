@@ -55,7 +55,6 @@ class QTable:
         self.lr = 0.1
         self.gamma = 0.9
 
-
     def get_best_action(self, state):
         max_value = max(self.q_table[state])
         indexes = []
@@ -94,7 +93,7 @@ class Agent:
 def train():
     for episode in range(5000):
         env.reset(random.choice(range(env.length)))
-        # env.reset(7)
+        # env.reset()
         state = env.state_init
         done = False
         print('episode: ', episode)
